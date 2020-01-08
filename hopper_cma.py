@@ -15,4 +15,4 @@ for i in seed:
                        weight_decay=weight_decay,
                        total_episode=total_episode,seed=i)
     reward, _ = agent.train()
-    pickle.dump(env + '_cma_seeds_' + str(i))
+    pickle.dump(reward, open(env + '_cma_seeds_' + str(i), 'wb'))

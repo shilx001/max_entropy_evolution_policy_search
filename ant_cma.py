@@ -13,4 +13,4 @@ for i in seed:
                        step_size_init=step_size_init,
                        weight_decay=weight_decay,seed=i)
     reward,_=agent.train()
-    pickle.dump(env+'_cma_seeds_'+str(i))
+    pickle.dump(reward, open(env + '_cma_seeds_' + str(i), 'wb'))
