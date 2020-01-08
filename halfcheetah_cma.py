@@ -13,6 +13,6 @@ for i in seed:
     agent = cma_es.CMA(env=env, population_size=population_size, sigma_init=sigma_init,
                        step_size_init=step_size_init,
                        weight_decay=weight_decay,
-                       total_episode=total_episode)
+                       total_episode=total_episode,seed=i)
     reward, _ = agent.train()
     pickle.dump(env + '_cma_seeds_' + str(i))
